@@ -19,7 +19,7 @@ const Menu = () => {
       {/* Menu List */}
       <List className="menu-list">
         {/* Dashboard */}
-        <ListItem button className="menu-item" component={Link} to="/menu">
+        <ListItem button className="menu-item" component={Link} to="/home">
           <ListItemIcon>
             <Home className="menu-icon" />
           </ListItemIcon>

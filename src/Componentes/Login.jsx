@@ -26,7 +26,7 @@ function Login() {
 
      
         setTimeout(() => {
-            navigate('/menu');
+            navigate('/home');
         }, 2000);
     };
 

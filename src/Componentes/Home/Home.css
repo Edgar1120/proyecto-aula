@@ -1,0 +1,31 @@
+/* Home.css */
+.home-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .home-title {
+    margin-bottom: 20px;
+  }
+  
+  .home-description {
+    margin-bottom: 40px;
+    color: #555; /* Un color más suave para la descripción */
+  }
+  
+  .featured-courses-title {
+    margin-bottom: 30px;
+  }
+  
+  .course-card {
+    transition: transform 0.3s; /* Animación suave al hacer hover */
+  }
+  
+  .course-card:hover {
+    transform: scale(1.05); /* Agranda la tarjeta ligeramente al hacer hover */
+  }
+  
+  .course-image {
+    border-radius: 5px 5px 0 0; /* Bordes redondeados en la parte superior */
+  }
+  
