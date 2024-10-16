@@ -7,33 +7,40 @@ import {
     MDBCard,
     MDBCardBody,
     MDBInput,
-    MDBCheckbox,
-    MDBIcon
-}
-    from 'mdb-react-ui-kit';
+    MDBCheckbox
+} from 'mdb-react-ui-kit';
+import { useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; 
 import "./Login.css";
 
 function Login() {
+    const navigate = useNavigate(); 
+
+    const handleLogin = () => {
+        toast.success('¡Bienvenido al Aula Virtual! Logueo exitoso.', {
+            position: 'top-center', 
+            autoClose: 2000, 
+            hideProgressBar: true,
+        });
+
+     
+        setTimeout(() => {
+            navigate('/menu');
+        }, 2000);
+    };
+
     return (
         <MDBContainer fluid className='p-4 background-radial-gradient overflow-hidden'>
-
             <MDBRow>
-
                 <MDBCol md='6' className='text-center text-md-start d-flex flex-column justify-content-center'>
-
                     <h1 className="my-5 display-3 fw-bold ls-tight px-3" style={{ color: 'hsl(218, 81%, 95%)' }}>
-                        Aula Virtual <br />
-                        <span style={{ color: 'hsl(218, 81%, 75%)' }}>Univesidad X</span>
+                        Aprende Desde Casa <br />
+                        <span style={{ color: 'hsl(218, 81%, 75%)' }}>Colegio virtual</span>
                     </h1>
-
-                    <p className='px-3' style={{ color: 'hsl(218, 81%, 85%)' }}>
-                        
-                    </p>
-
                 </MDBCol>
 
                 <MDBCol md='6' className='position-relative'>
-
                     <div id="radius-shape-1" className="position-absolute rounded-circle shadow-5-strong"></div>
                     <div id="radius-shape-2" className="position-absolute shadow-5-strong"></div>
 
@@ -57,15 +64,17 @@ function Login() {
                                 <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Recordar contraseña' />
                             </div>
 
-                            <MDBBtn className='w-100 mb-4' size='md'>Login</MDBBtn>
+                            <MDBBtn className='w-100 mb-4' size='md' onClick={handleLogin}>
+                                Login
+                            </MDBBtn>
 
                         </MDBCardBody>
                     </MDBCard>
 
                 </MDBCol>
-
             </MDBRow>
 
+            <ToastContainer />
         </MDBContainer>
     );
 }

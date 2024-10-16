@@ -1,0 +1,24 @@
+.course-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    text-align: center;
+    transition: transform 0.2s;
+  }
+  
+  .course-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .course-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  .course-title {
+    margin-top: 8px;
+    font-size: 1.2em;
+  }
+  
