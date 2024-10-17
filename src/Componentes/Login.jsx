@@ -11,20 +11,20 @@ import {
 } from 'mdb-react-ui-kit';
 import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'; 
+import 'react-toastify/dist/ReactToastify.css';
 import "./Login.css";
 
 function Login() {
-    const navigate = useNavigate(); 
+    const navigate = useNavigate();
 
     const handleLogin = () => {
         toast.success('¡Bienvenido al Aula Virtual! Logueo exitoso.', {
-            position: 'top-center', 
-            autoClose: 2000, 
+            position: 'top-center',
+            autoClose: 2000,
             hideProgressBar: true,
         });
 
-     
+
         setTimeout(() => {
             navigate('/home');
         }, 2000);
@@ -64,9 +64,10 @@ function Login() {
                                 <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Recordar contraseña' />
                             </div>
 
-                            <MDBBtn className='w-100 mb-4' size='md' onClick={handleLogin}>
+                            <button className='w-100 mb-4 btn btn-primary' onClick={handleLogin}>
                                 Login
-                            </MDBBtn>
+                            </button>
+
 
                         </MDBCardBody>
                     </MDBCard>
