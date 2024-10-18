@@ -5,6 +5,7 @@ import Login from './Componentes/Login';
 import ListaCurso from './Componentes/Cursos/CourseList';
 import Home from './Componentes/Home/Home'; 
 import Sidebar from './Componentes/Sidebar/Sidebar';
+import Matriculas from './Componentes/Matricula/Matricula';
 
 function App() {
   const location = useLocation();
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<Home />} /> 
         <Route path="/curso" element={<ListaCurso />} />
+        <Route path="/matricula" element={<Matriculas />} /> 
       </Routes>  
     </div>
   );
