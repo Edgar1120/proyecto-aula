@@ -49,16 +49,16 @@ function Login() {
                             <h1 className="login-title">Login</h1>
                             <MDBRow>
                                 <MDBCol col='6'>
-                                    <MDBInput wrapperClass='mb-4' placeholder='First name' id='form1' type='text' />
+                                    <MDBInput wrapperClass='mb-4' placeholder='Nombre' id='form1' type='text' />
                                 </MDBCol>
 
                                 <MDBCol col='6'>
-                                    <MDBInput wrapperClass='mb-4' placeholder='Last name' id='form2' type='text' />
+                                    <MDBInput wrapperClass='mb-4' placeholder='Apellos' id='form2' type='text' />
                                 </MDBCol>
                             </MDBRow>
 
-                            <MDBInput wrapperClass='mb-4' placeholder='Email' id='form3' type='email' />
-                            <MDBInput wrapperClass='mb-4' placeholder='Password' id='form4' type='password' />
+                            <MDBInput wrapperClass='mb-4' placeholder='Correo' id='form3' type='email' />
+                            <MDBInput wrapperClass='mb-4' placeholder='Contraseña' id='form4' type='password' />
 
                             <div className='d-flex justify-content-center mb-4'>
                                 <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Recordar contraseña' />
