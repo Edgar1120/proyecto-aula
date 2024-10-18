@@ -18,6 +18,11 @@
   }
   
   .course-card {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; 
     transition: transform 0.3s; /* Animación suave al hacer hover */
   }
   
@@ -26,6 +31,11 @@
   }
   
   .course-image {
+    width: 65%;
+    padding-top: 65%;
+    background-size: cover;
+    background-position: center;
     border-radius: 5px 5px 0 0; /* Bordes redondeados en la parte superior */
+
   }
   

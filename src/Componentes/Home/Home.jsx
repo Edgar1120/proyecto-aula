@@ -3,22 +3,23 @@ import React from 'react';
 import { Box, Typography, Grid, Card, CardContent, Button } from '@mui/material';
 import './Home.css'; 
 
+
 const Home = () => {
   const courses = [
     {
       title: 'Estudios Sociales',
       description: 'Explora la historia, geografía y cultura de diferentes países.',
-      image: 'url_to_image_estudios_sociales', // Cambia esto por la URL de la imagen
+      image: 'https://i.ibb.co/MZGscZk/estudios-Sociales.webp',
     },
     {
       title: 'Matemáticas',
       description: 'Aprende matemáticas básicas y avanzadas con ejercicios prácticos.',
-      image: 'url_to_image_matematicas', // Cambia esto por la URL de la imagen
+      image: 'https://i.ibb.co/V2DTYHM/matematicas.png',
     },
     {
       title: 'Español',
       description: 'Mejora tus habilidades de lectura y escritura en español.',
-      image: 'url_to_image_espanol', // Cambia esto por la URL de la imagen
+      image: 'https://i.ibb.co/FqX95QB/espanol.png',
     },
   ];
 
