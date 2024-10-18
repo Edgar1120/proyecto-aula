@@ -7,25 +7,26 @@ const CourseList = () => {
   const courses = [
     {
       title: 'Estudios Sociales',
-      image: 'url_to_image_estudios_sociales', // Cambia esto por la URL de la imagen
+      image: 'https://i.ibb.co/MZGscZk/estudios-Sociales.webp',
     },
     {
       title: 'Matemáticas',
-      image: 'url_to_image_matematicas', // Cambia esto por la URL de la imagen
+      image: 'https://i.ibb.co/V2DTYHM/matematicas.png',
     },
     {
       title: 'Español',
-      image: 'url_to_image_espanol', // Cambia esto por la URL de la imagen
+      image: 'https://i.ibb.co/FqX95QB/espanol.png',
     },
     {
       title: 'Ciencias Naturales',
-      image: 'url_to_image_ciencias_naturales', // Cambia esto por la URL de la imagen
+      image: 'https://i.ibb.co/JnmQJmP/biologia.png',
     },
     {
       title: 'Inglés',
-      image: 'url_to_image_ingles', // Cambia esto por la URL de la imagen
+      image: 'https://i.ibb.co/QHxJ1zP/ingles.png',
     },
   ];
+
 
   return (
     <div className="course-list" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>

@@ -8,7 +8,7 @@ const CourseCard = ({ title, image }) => {
       <CardMedia
         component="img"
         height="140"
-        image={image} // Asegúrate de que la URL sea válida
+        image={image}
         alt={title}
       />
       <CardContent>
