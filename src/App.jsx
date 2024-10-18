@@ -6,6 +6,9 @@ import ListaCurso from './Componentes/Cursos/CourseList';
 import Home from './Componentes/Home/Home'; 
 import Sidebar from './Componentes/Sidebar/Sidebar';
 import Matriculas from './Componentes/Matricula/Matricula';
+import Espanol from './Componentes/Cursos/details/Espanol';
+import EstudiosSociales from './Componentes/Cursos/details/EstudiosSociales';
+import Matematicas from './Componentes/Cursos/details/Matematicas';
 
 function App() {
   const location = useLocation();
@@ -20,6 +23,9 @@ function App() {
         <Route path="/home" element={<Home />} /> 
         <Route path="/curso" element={<ListaCurso />} />
         <Route path="/matricula" element={<Matriculas />} /> 
+        <Route path="/curso/espanol" element={<Espanol/>}/>
+        <Route path="/curso/estudios-sociales" element={<EstudiosSociales />} />
+        <Route path="/curso/matematicas" element={<Matematicas/>}/>
       </Routes>  
     </div>
   );

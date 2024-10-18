@@ -12,13 +12,13 @@ export function Matriculas() {
         { cedula: '123456789', nombre: 'Juan', apellido: 'Pérez', materia: 'Sociales', estado: 'Matriculada' },
         { cedula: '123456789', nombre: 'Juan', apellido: 'Pérez', materia: 'Matemáticas', estado: 'Matriculada' },
         { cedula: '123456789', nombre: 'Juan', apellido: 'Pérez', materia: 'Español', estado: 'Pendiente' },
-        { cedula: '123456789', nombre: 'Juan', apellido: 'Pérez', materia: 'Biología', estado: 'Pendiente' },
-        { cedula: '123456789', nombre: 'Juan', apellido: 'Pérez', materia: 'Cómputo', estado: 'Matriculada' }
+        { cedula: '123456789', nombre: 'Juan', apellido: 'Pérez', materia: 'Ciencias', estado: 'Pendiente' },
+        { cedula: '123456789', nombre: 'Juan', apellido: 'Pérez', materia: 'Ingles', estado: 'Matriculada' }
     ]);
 
     const [modalInsertar, setModalInsertar] = useState(false);
-    const [isEditMode, setIsEditMode] = useState(false); // Estado para saber si estamos editando
-    const [currentMatriculaIndex, setCurrentMatriculaIndex] = useState(null); // Índice de la matrícula seleccionada para editar
+    const [isEditMode, setIsEditMode] = useState(false); 
+    const [currentMatriculaIndex, setCurrentMatriculaIndex] = useState(null); 
 
     const [form, setForm] = useState({
         cedula: '',
@@ -74,7 +74,7 @@ export function Matriculas() {
         toggleModalInsertar();
     };
 
-    const materias = ['Sociales', 'Matemáticas', 'Español', 'Biología', 'Cómputo'];
+    const materias = ['Sociales', 'Matemáticas', 'Español', 'Ciencias', 'Ingles'];
 
     const columns = [
         { name: "cedula", label: "Cédula" },
