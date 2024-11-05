@@ -1,0 +1,84 @@
+.Usuarios {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.table-container {
+    margin-left: 50px;
+}
+
+/* Estilos para los botones */
+.btn,
+.btn-modal {
+    font-weight: 700;
+    color: #fff; /* Color del texto por defecto */
+    background-color: #365486;
+    padding: 14px 35px; 
+    font-size: 20px; 
+    border-radius: 12px; 
+    position: relative;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.btn:hover span,
+.btn-modal:hover span {
+    color: #000000; /* Cambiar a negro */
+}
+
+.btn-modal {
+    padding: 20px 35px; 
+    font-size: 20px; 
+    margin-left: 7px;
+    margin-bottom: 10px;
+}
+
+.btn::before,
+.btn-modal::before {
+    content: "";
+    background: #7FC7D9;
+    border-radius: 12px; /* Asegurarte de que el border-radius coincida */
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover::before,
+.btn-modal:hover::before {
+    width: 100%; /* Muestra el fondo en hover */
+}
+
+/* Asegúrate de que el contenido esté por encima del pseudo-elemento */
+.btn span,
+.btn-modal span {
+    position: relative; /* Asegura que el contenido esté por encima del fondo */
+    z-index: 1; /* Asegura que el contenido esté por encima del fondo */
+    transition: color 0.3s ease-in-out; /* Transición para suavizar el cambio de color */
+}
+
+/* Cambiar el color del texto cuando el botón está en hover */
+.btn:hover span,
+.btn-modal:hover span {
+    color: #000000; /* Cambia el color del texto a negro */
+}
+
+/* Estilos para los inputs personalizados */
+.custom-input {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(3, 3, 3, 0.5);
+    border-radius: 12px;
+    height: 40px;
+    padding-left: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.custom-input:focus {
+    border: 1px solid #365486;
+    outline: none;
+}

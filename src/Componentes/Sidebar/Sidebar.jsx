@@ -53,11 +53,10 @@ function Sidebar() {
               </Link>
             </li>
 
-           
             {userRole === 'Administrador' && (
               <>
                 <li className='nav-text'>
-                  <Link to='/usuarios'>
+                  <Link to='/User'>
                     <FaIcons.FaUser />
                     <span>Usuarios</span>
                   </Link>

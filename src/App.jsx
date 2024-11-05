@@ -10,6 +10,7 @@ import Espanol from './Componentes/Cursos/details/Espanol';
 import EstudiosSociales from './Componentes/Cursos/details/EstudiosSociales';
 import Matematicas from './Componentes/Cursos/details/Matematicas';
 import { UserProvider } from './Componentes/UserContext';
+import Usuario from './Componentes/Usuario/Usuario';
 
 function App() {
   const location = useLocation();
@@ -22,6 +23,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/User" element={<Usuario />} />
         <Route path="/curso" element={<ListaCurso />} />
         <Route path="/matricula" element={<Matriculas />} />
         <Route path="/curso/espanol" element={<Espanol />} />
