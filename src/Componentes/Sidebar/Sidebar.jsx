@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
-import { Link } from 'react-router-dom';
-import { SidebarData } from './SidebarData';
-import './Sidebar.css';
 import { IconContext } from 'react-icons';
+import { useUserContext } from '../UserContext';
+import './Sidebar.css';
 
 function Sidebar() {
+  const { userRole } = useUserContext();
   const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar);
@@ -26,16 +27,65 @@ function Sidebar() {
                 <AiIcons.AiOutlineClose />
               </Link>
             </li>
-            {SidebarData.map((item, index) => {
-              return (
-                <li key={index} className={item.cName}>
-                  <Link to={item.path}>
-                    {item.icon}
-                    <span>{item.title}</span>
+           
+            <li className='nav-text'>
+              <Link to='/home'>
+                <AiIcons.AiFillHome />
+                <span>Inicio</span>
+              </Link>
+            </li>
+            <li className='nav-text'>
+              <Link to='/curso'>
+                <FaIcons.FaBook />
+                <span>Cursos</span>
+              </Link>
+            </li>
+            <li className='nav-text'>
+              <Link to='/matricula'>
+                <FaIcons.FaEnvelopeOpenText />
+                <span>Matrículas</span>
+              </Link>
+            </li>
+            <li className='nav-text'>
+              <Link to='/'>
+              <AiIcons.AiOutlineLogout />
+                <span>Cerrar sesion</span>
+              </Link>
+            </li>
+
+           
+            {userRole === 'Administrador' && (
+              <>
+                <li className='nav-text'>
+                  <Link to='/usuarios'>
+                    <FaIcons.FaUser />
+                    <span>Usuarios</span>
                   </Link>
                 </li>
-              );
-            })}
+                <li className='nav-text'>
+                  <Link to='/reportes'>
+                    <AiIcons.AiOutlineBarChart />
+                    <span>Reportes</span>
+                  </Link>
+                </li>
+              </>
+            )}
+            {userRole === 'Profesor' && (
+              <>
+                <li className='nav-text'>
+                  <Link to='/asistencia'>
+                    <FaIcons.FaClipboardList />
+                    <span>Asistencia</span>
+                  </Link>
+                </li>
+                <li className='nav-text'>
+                  <Link to='/calificaciones'>
+                    <FaIcons.FaGraduationCap />
+                    <span>Calificaciones</span>
+                  </Link>
+                </li>
+              </>
+            )}
           </ul>
         </nav>
       </IconContext.Provider>

@@ -1,33 +1,28 @@
-import React from 'react';
-import {
-    MDBBtn,
-    MDBContainer,
-    MDBRow,
-    MDBCol,
-    MDBCard,
-    MDBCardBody,
-    MDBInput,
-    MDBCheckbox
-} from 'mdb-react-ui-kit';
+// Login.js
+import React, { useState } from 'react';
+import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBInput } from 'mdb-react-ui-kit';
 import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
+import { useUserContext } from './UserContext';
 import 'react-toastify/dist/ReactToastify.css';
-import "./Login.css";
+import './Login.css';
 
 function Login() {
     const navigate = useNavigate();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const { setUserRole } = useUserContext();
 
-    const handleLogin = () => {
-        toast.success('¡Bienvenido al Aula Virtual! Logueo exitoso.', {
-            position: 'top-center',
-            autoClose: 2000,
-            hideProgressBar: true,
-        });
+    const handleLogin = (role) => {
+        if (!email || !password) {
+            toast.error('Por favor, completa todos los campos.');
+            return;
+        }
 
-
-        setTimeout(() => {
-            navigate('/home');
-        }, 2000);
+        setUserRole(role);
+        toast.success(`¡Bienvenido ${role}! Logueo exitoso.`);
+        
+        setTimeout(() => navigate('/home'), 2000);
     };
 
     return (
@@ -39,42 +34,31 @@ function Login() {
                         <span style={{ color: 'hsl(218, 81%, 75%)' }}>Colegio virtual</span>
                     </h1>
                 </MDBCol>
-
                 <MDBCol md='6' className='position-relative'>
-                    <div id="radius-shape-1" className="position-absolute rounded-circle shadow-5-strong"></div>
-                    <div id="radius-shape-2" className="position-absolute shadow-5-strong"></div>
-
                     <MDBCard className='my-5 bg-glass'>
                         <MDBCardBody className='p-5'>
                             <h1 className="login-title">Login</h1>
-                            <MDBRow>
-                                <MDBCol col='6'>
-                                    <MDBInput wrapperClass='mb-4' placeholder='Nombre' id='form1' type='text' />
-                                </MDBCol>
-
-                                <MDBCol col='6'>
-                                    <MDBInput wrapperClass='mb-4' placeholder='Apellos' id='form2' type='text' />
-                                </MDBCol>
-                            </MDBRow>
-
-                            <MDBInput wrapperClass='mb-4' placeholder='Correo' id='form3' type='email' />
-                            <MDBInput wrapperClass='mb-4' placeholder='Contraseña' id='form4' type='password' />
-
-                            <div className='d-flex justify-content-center mb-4'>
-                                <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Recordar contraseña' />
+                            <MDBInput wrapperClass='mb-4' placeholder='Correo' type='email'
+                                      value={email} onChange={(e) => setEmail(e.target.value)} />
+                            <MDBInput wrapperClass='mb-4' placeholder='Contraseña' type='password'
+                                      value={password} onChange={(e) => setPassword(e.target.value)} />
+                            <div className='d-flex flex-column'>
+                                <button className='w-100 mb-4 btn btn-primary' onClick={() => handleLogin('Estudiante')}>
+                                    <span>Estudiante</span> 
+                                </button>
+                                <div className="d-flex justify-content-around">
+                                    <button className='w-45 btn btn-primary' onClick={() => handleLogin('Administrador')}>
+                                        <span>Admin</span>
+                                    </button>
+                                    <button className='w-45 btn btn-primary' onClick={() => handleLogin('Profesor')}>
+                                        <span>Profesor</span>
+                                    </button>
+                                </div>
                             </div>
-
-                            <button className='w-100 mb-4 btn btn-primary' onClick={handleLogin}>
-                               <span>Login</span> 
-                            </button>
-
-
                         </MDBCardBody>
                     </MDBCard>
-
                 </MDBCol>
             </MDBRow>
-
             <ToastContainer />
         </MDBContainer>
     );
