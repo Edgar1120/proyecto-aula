@@ -1,0 +1,112 @@
+.calificaciones-container {
+    padding: 20px;
+  }
+  
+  .materias {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .materia-btn {
+    padding: 10px 20px;
+    background-color: #1976D2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .materia-btn:hover {
+    background-color: #1565C0;
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(6, 11, 38, 0.8); /* Fondo oscuro semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 600px;
+    text-align: center;
+  }
+  
+  .calificaciones-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .calificaciones-table th, .calificaciones-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .calificaciones-table th {
+    background-color: #060B26; /* Fondo oscuro para los encabezados */
+    color: white;
+  }
+  
+  input[type="number"] {
+    width: 80px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .guardar-btn {
+    padding: 10px 20px;
+    background-color: #1976D2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  
+  .guardar-btn:hover {
+    background-color: #1565C0;
+  }
+  
+  .close-modal-btn {
+    padding: 10px 20px;
+    background-color: #F44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .close-modal-btn:hover {
+    background-color: #D32F2F;
+  }
+  
+  .calificaciones-guardadas-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+  }
+  
+  .calificaciones-guardadas-table th, .calificaciones-guardadas-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .calificaciones-guardadas-table th {
+    background-color: #060B26;
+    color: white;
+  }
+  

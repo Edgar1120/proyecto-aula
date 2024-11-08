@@ -62,7 +62,7 @@ function Sidebar() {
                   </Link>
                 </li>
                 <li className='nav-text'>
-                  <Link to='/reportes'>
+                  <Link to='Reportes'>
                     <AiIcons.AiOutlineBarChart />
                     <span>Reportes</span>
                   </Link>
@@ -72,13 +72,13 @@ function Sidebar() {
             {userRole === 'Profesor' && (
               <>
                 <li className='nav-text'>
-                  <Link to='/asistencia'>
+                  <Link to='/Asistencia'>
                     <FaIcons.FaClipboardList />
                     <span>Asistencia</span>
                   </Link>
                 </li>
                 <li className='nav-text'>
-                  <Link to='/calificaciones'>
+                  <Link to='/Calificaciones'>
                     <FaIcons.FaGraduationCap />
                     <span>Calificaciones</span>
                   </Link>

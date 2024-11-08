@@ -11,6 +11,9 @@ import EstudiosSociales from './Componentes/Cursos/details/EstudiosSociales';
 import Matematicas from './Componentes/Cursos/details/Matematicas';
 import { UserProvider } from './Componentes/UserContext';
 import Usuario from './Componentes/Usuario/Usuario';
+import Reportes from './Componentes/Reportes/Reportes';
+import Asistencia from './Componentes/Asistensia/Asistencia';
+import Calificaciones from './Componentes/Calificaciones/Calificaciones';
 
 function App() {
   const location = useLocation();
@@ -22,10 +25,13 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Login />} />
+        <Route path="/Calificaciones" element={<Calificaciones />} />
+        <Route path="/Asistencia" element={<Asistencia />} />
         <Route path="/home" element={<Home />} />
         <Route path="/User" element={<Usuario />} />
         <Route path="/curso" element={<ListaCurso />} />
         <Route path="/matricula" element={<Matriculas />} />
+        <Route path="/Reportes" element={<Reportes />} />
         <Route path="/curso/espanol" element={<Espanol />} />
         <Route path="/curso/estudios-sociales" element={<EstudiosSociales />} />
         <Route path="/curso/matematicas" element={<Matematicas />} />

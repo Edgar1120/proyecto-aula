@@ -105,12 +105,15 @@ export function Usuarios() {
         <>
             <div className="Usuarios">
                 <br />
+                
                 <div className="center-content" style={{ display: 'flex', justifyContent: 'flex-end' }}>
                     <button className="btn" onClick={() => { setIsEditMode(false); toggleModalInsertar(); resetForm(); }}>
                        <span><FontAwesomeIcon icon={faPlus} /></span> 
                     </button>
+                    
                 </div>
                 <br /><br />
+              
                 <div className="table-container">
                     <MUIDataTable
                         title={"Usuarios"}
